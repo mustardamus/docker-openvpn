@@ -12,7 +12,7 @@ expect "Verifying - Enter PEM pass phrase:"
 send "$pkipass\r"
 
 expect "Common Name (eg: your user, host, or server name) \\\[Easy-RSA CA\\\]:"
-send "$SERVER_NAME\r"
+send "$servername\r"
 
 expect "Enter pass phrase for /etc/openvpn/pki/private/ca.key:"
 send "$pkipass\r"
