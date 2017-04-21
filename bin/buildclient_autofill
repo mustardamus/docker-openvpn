@@ -4,7 +4,7 @@ set clientname [lindex $argv 0]
 set clientpass [lindex $argv 1]
 set pkipass [lindex $argv 2]
 
-spawn "/bin/sh /usr/local/share/easy-rsa/easyrsa3/easyrsa build-client-full $clientname"
+spawn "/usr/local/bin/buildclient"
 
 expect "Enter PEM pass phrase:"
 send "$clientpass\r"

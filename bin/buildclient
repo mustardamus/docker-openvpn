@@ -1,0 +1,3 @@
+#!/bin/bash
+
+easyrsa build-client-full $clientname
