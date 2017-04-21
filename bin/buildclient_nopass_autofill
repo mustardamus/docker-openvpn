@@ -8,4 +8,7 @@ spawn easyrsa build-client-full $clientname nopass
 expect "Enter pass phrase for /etc/openvpn/pki/private/ca.key:"
 send "$pkipass\r"
 
+expect "Enter pass phrase for /etc/openvpn/pki/private/ca.key:"
+send "$pkipass\r"
+
 interact
