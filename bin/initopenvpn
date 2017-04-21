@@ -224,5 +224,4 @@ if diff -q "$bak" "$conf" 2>/dev/null; then
     rm -fv "$bak"
 fi
 
-echo "$conf" > $OPENVPN/openvpn.conf
 echo "Successfully generated config"
