@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+
+set clientname [lindex $argv 0]
+set pkipass [lindex $argv 2]
+
+spawn easyrsa build-client-full $clientname nopass
+
+expect "Enter pass phrase for /etc/openvpn/pki/private/ca.key:"
+send "$pkipass\r"
+
+interact

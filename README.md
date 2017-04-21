@@ -106,3 +106,14 @@ which is based on
 docker run -v $OVPN_DATA:/etc/openvpn --rm -it [CONTAINER_ID] initpki_autofill [PKI_PASSWORD] [SERVER_NAME]
 ```
 
+* Ability to pass Client Name and Password:
+
+```
+docker run -v $OVPN_DATA:/etc/openvpn --rm -it [CONTAINER_ID] buildclient_autofill [CLIENT_NAME] [CLIENT_PASSWORD] [PKI_PASSWORD]
+```
+
+Without a Client Password:
+
+```
+docker run -v $OVPN_DATA:/etc/openvpn --rm -it [CONTAINER_ID] buildclient_nopass_autofill [CLIENT_NAME] [PKI_PASSWORD]
+```
