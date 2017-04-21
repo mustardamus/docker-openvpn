@@ -9,7 +9,7 @@ Setup a tiny(12MB), but full featured and secure OpenVPN server without effort u
 
 ## Quick Start
 
-1. Create the `$OVPN_DATA` volume container 
+1. Create the `$OVPN_DATA` volume container
 
         export OVPN_DATA=openvpn_data
         docker volume create --name $OVPN_DATA
@@ -40,7 +40,7 @@ Setup a tiny(12MB), but full featured and secure OpenVPN server without effort u
             docker run -v $OVPN_DATA:/etc/openvpn --rm martin/openvpn getclient -M 1312 CLIENTNAME > CLIENTNAME.ovpn
 
 6. Revoke a client certificate
-		
+
     If you need to remove access for a client then you can revoke the client certificate by running
 
         docker run -v $OVPN_DATA:/etc/openvpn --rm -it martin/openvpn revokeclient CLIENTNAME
@@ -90,5 +90,10 @@ Setup a tiny(12MB), but full featured and secure OpenVPN server without effort u
   * Android, OpenVPN for Android 0.6.50
   * Windows 10 64 bit using openvpn-2.4.0
 
+## Fork Changes
 
-Based on [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn).
+Based on [chadoe/docker-openvpn](https://github.com/chadoe/docker-openvpn)
+which is based on [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn).
+
+* Fixed bug in configuration
+*
