@@ -99,5 +99,10 @@ which is based on
 * Fixed bug in configuration
 * Disabled logging
 * openvpn=2.4.1-r1
-*
+* Ability to pass PKI Password and Server Name instead of manually entering them
+  when running initpki:
+
+```
+docker run -v $OVPN_DATA:/etc/openvpn --rm -it [CONTAINER_ID] initpki_autofill [PKI_PASSWORD] [SERVER_NAME]
+```
 
