@@ -155,7 +155,7 @@ fi
 cat > "$conf" <<EOF
 server $(getroute $OVPN_SERVER)
 tls-server
-verb 3
+verb 0
 crl-verify $OPENVPN/crl.pem
 key $EASYRSA_PKI/private/${OVPN_CN}.key
 ca $EASYRSA_PKI/ca.crt
@@ -180,7 +180,7 @@ proto $OVPN_PROTO
 # Rely on Docker to do port mapping, internally always 1194
 port 1194
 dev tun0
-status /root/openvpn-status.log
+# status /root/openvpn-status.log
 
 client-config-dir $OPENVPN/ccd
 
