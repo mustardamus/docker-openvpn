@@ -93,7 +93,9 @@ Setup a tiny(12MB), but full featured and secure OpenVPN server without effort u
 ## Fork Changes
 
 Based on [chadoe/docker-openvpn](https://github.com/chadoe/docker-openvpn)
-which is based on [kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn).
+which is based on
+[kylemanna/docker-openvpn](https://github.com/kylemanna/docker-openvpn).
 
 * Fixed bug in configuration
-*
+* Disabled logging
+

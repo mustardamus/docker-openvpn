@@ -1,0 +1,20 @@
+#!/usr/bin/expect
+
+spawn "/usr/local/bin/initpki"
+
+expect "Enter PEM pass phrase:"
+send "$PKI_PASSWORD\r"
+
+expect "Verifying - Enter PEM pass phrase:"
+send "$PKI_PASSWORD\r"
+
+expect "Common Name (eg: your user, host, or server name) \\\[Easy-RSA CA\\\]:"
+send "$SERVER_NAME\r"
+
+expect "Enter pass phrase for /etc/openvpn/pki/private/ca.key:"
+send "$PKI_PASSWORD\r"
+
+expect "Enter pass phrase for /etc/openvpn/pki/private/ca.key:"
+send "$PKI_PASSWORD\r"
+
+interact
