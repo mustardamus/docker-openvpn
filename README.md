@@ -98,4 +98,6 @@ which is based on
 
 * Fixed bug in configuration
 * Disabled logging
+* openvpn=2.4.1-r1
+*
 
